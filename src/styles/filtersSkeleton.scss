@@ -1,0 +1,31 @@
+.filtersSkeleton {
+  & > span {
+    margin-bottom: 32px;
+  }
+
+  &_field {
+    margin-bottom: 24px !important;
+
+    & > span {
+      margin-bottom: 8px;
+    }
+  }
+
+  &_option {
+    margin: 4px 0;
+    display: flex;
+    gap: 8px;
+  }
+
+  &_colors {
+    gap: 24px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .filtersSkeleton {
+    &_colors {
+      flex-wrap: wrap;
+    }
+  }
+}

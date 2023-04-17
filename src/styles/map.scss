@@ -1,0 +1,51 @@
+.map {
+  margin-top: 24px;
+  width: 100%;
+  height: 200px;
+}
+
+.main_section_map {
+  margin-top: 56px;
+}
+
+.map_pin {
+  color: red;
+  display: block;
+}
+.pin_container {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50px;
+  padding: 10px;
+  font-weight: 700;
+}
+
+/* Mobile View -small */
+@media only screen and (max-width: 719px) {
+  .map {
+    margin-bottom: 40px;
+  }
+}
+
+/* T A B L E T   V I E W -medium */
+@media only screen and (min-width: 720px) and (max-width: 989px) {
+  .map {
+    margin-bottom: 40px;
+    height: 300px;
+  }
+}
+
+/* D E S K T O P   V I E W -large */
+@media only screen and (min-width: 990px) {
+  .map {
+    height: 600px;
+    margin-top: 0;
+  }
+
+  .main_section_map {
+    margin-top: 0;
+  }
+}

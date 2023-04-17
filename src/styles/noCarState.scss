@@ -1,0 +1,20 @@
+.noCarState {
+  border: 2px solid $green;
+  background-color: white;
+  padding: 16px;
+
+  & h2 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .noCarState {
+    height: fit-content;
+    grid-column: 1/-1;
+
+    & h2 {
+      font-size: 24px;
+    }
+  }
+}

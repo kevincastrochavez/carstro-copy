@@ -1,0 +1,76 @@
+.carDetailsSkeleton {
+  padding: 24px;
+
+  &_title {
+    margin-top: 24px !important;
+  }
+
+  &_info {
+    display: grid;
+    gap: 24px;
+
+    &-top,
+    &-price {
+      display: grid;
+      gap: 8px;
+    }
+
+    &-price {
+      grid-template-columns: 1fr 1fr;
+
+      & span {
+        width: 100% !important;
+      }
+
+      &-offer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &_iconsContainer {
+    margin-top: 48px !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+  }
+
+  &_icon {
+    display: grid;
+    gap: 8px;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .carDetailsSkeleton {
+    padding: 32px;
+    max-width: 1040px;
+    margin: 0 auto;
+
+    &_info {
+      margin-top: 24px !important;
+      grid-template-columns: 1fr 250px 100px;
+      grid-template-rows: 52px;
+
+      &-top {
+        & span {
+          margin-top: 0 !important;
+          width: 80% !important;
+        }
+      }
+
+      &-price {
+        & > span {
+          height: 100% !important;
+        }
+      }
+    }
+
+    &_iconsContainer {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}

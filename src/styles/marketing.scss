@@ -1,0 +1,160 @@
+.marketingContainer {
+  margin-top: -80px;
+  background-color: white;
+}
+
+.marketing-car-rock-img,
+.marketing-car-rock-img-ipad,
+.marketing-car-rock-img-large,
+.marketing-white-car-img-mobile,
+.marketing-white-car-img-ipad,
+.marketing-white-car-img-large {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.marketing-h1-container {
+  padding: 24px;
+}
+
+.marketing-h1 {
+  line-height: 40px;
+}
+
+.marketing-wrap-text-img {
+  padding: 0 24px;
+}
+
+.marketing-p {
+  padding: 8px 0px;
+  text-align: justify;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.marketing-p-quote {
+  font-family: $heading-font;
+  padding: 32px 24px 40px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.marketing-bot-img-container {
+  padding-top: 48px;
+}
+
+.marketing-white-car-img-ipad,
+.marketing-white-car-img-large,
+.marketing-car-rock-img-large,
+.marketing-car-rock-img-ipad {
+  display: none;
+}
+
+@media only screen and (min-width: 720px) {
+  .marketing-wrap-text-img {
+    padding: 0 32px;
+  }
+
+  .marketing-h1-container {
+    padding: 32px;
+  }
+
+  .marketing-h1 {
+    line-height: 50px;
+    font-size: 40px;
+    font-weight: 600;
+    width: 700px;
+  }
+}
+
+@media only screen and (min-width: 860px) {
+  .marketing-white-car-img-mobile,
+  .marketing-car-rock-img {
+    display: none;
+  }
+
+  .marketing-white-car-img-ipad {
+    display: block;
+    width: 375px;
+    padding-top: 8px;
+  }
+
+  .marketing-h1-info-wrap {
+  }
+
+  .marketing-car-rock-img-ipad {
+    display: block;
+  }
+
+  .marketing-wrap-text-img {
+    display: flex;
+    gap: 20px;
+  }
+
+  .marketing-p {
+    font-size: 15px;
+    line-height: 22.5px;
+  }
+
+  .marketing-quote-container {
+    width: 506px;
+    margin: 0 auto;
+  }
+
+  .marketing-bot-img-container {
+    padding-top: 0;
+
+    & img {
+      height: 100%;
+    }
+  }
+
+  .marketing-p-quote {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  .marketing-white-car-img-ipad,
+  .marketing-car-rock-img-ipad {
+    display: none;
+  }
+
+  .marketing-white-car-img-large {
+    display: block;
+    padding-top: 12px;
+  }
+
+  .marketing-car-rock-img-large {
+    display: block;
+  }
+
+  .marketing-h1 {
+    width: 687px;
+  }
+
+  .marketing-h1-info-wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+
+  .marketing-p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .marketing-h1-container {
+    padding-left: 0;
+  }
+
+  .marketing-wrap-text-img {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,268 @@
+.carInventory {
+  padding: $px-24 $px-24 $px-40;
+  background-color: $bgnd-white;
+  display: grid;
+  grid-template-rows: auto $px-36 auto $px-44 auto;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+  &_top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    & h4 {
+      font-family: $body-font;
+      line-height: 1.5;
+    }
+
+    & p {
+      font-size: $px-12;
+    }
+
+    &-right {
+      text-align: right;
+
+      & svg {
+        font-size: 16px;
+        transform: translateY(2px);
+        margin-left: 4px;
+      }
+    }
+
+    & > span {
+      font-weight: bold;
+    }
+  }
+
+  &_popover div {
+    padding: 10px;
+    right: 48px !important;
+    max-width: calc(100% - 96px);
+    margin-top: 8px;
+  }
+
+  &_img {
+    grid-row: 3/4;
+
+    width: 70%;
+    max-width: 300px;
+    justify-self: center;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &_bottomContainer {
+    grid-row: 5/6;
+
+    display: grid;
+    grid-template-rows: auto $px-40 auto;
+  }
+
+  &_features {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    justify-items: center;
+
+    &-feature {
+      width: 100%;
+    }
+
+    &-divider {
+      width: 1px;
+      background-color: $lightIcon;
+    }
+
+    & p,
+    span {
+      text-align: center;
+    }
+
+    & span {
+      display: block;
+      font-size: $px-12;
+    }
+  }
+
+  &_link {
+    grid-row: 3/4;
+
+    & button {
+      padding: $px-8;
+      font-family: $body-font;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.5;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      cursor: pointer;
+    }
+  }
+}
+
+.carInventory_listView {
+  grid-template-rows: auto $px-12 auto;
+  padding-bottom: 12px;
+  cursor: pointer;
+
+  .carInventory {
+    &_img {
+      width: 30vw;
+      justify-self: end;
+    }
+
+    &_bottomContainer {
+      grid-template-rows: $px-28 auto $px-40 auto;
+    }
+
+    &_features {
+      grid-row: 2/3;
+    }
+
+    &_link {
+      grid-row: 5/6;
+    }
+
+    &_expand,
+    &_close {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+
+      & svg {
+        font-size: 16px;
+      }
+
+      & p {
+        font-size: 12px;
+      }
+    }
+
+    &_expand {
+      margin-top: 8px;
+      grid-row: 4/5;
+    }
+
+    &_close {
+      margin-top: 8px;
+      grid-row: 6/7;
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .carInventory {
+    padding: $px-32 $px-32 $px-44;
+    grid-template-rows: auto $px-32 auto $px-40 auto;
+
+    &_popover div {
+      right: 64px !important;
+    }
+
+    &_img {
+      width: 60%;
+    }
+  }
+
+  .carInventory_listView {
+    grid-template-rows: auto 12px auto;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .carInventory {
+    width: 300px;
+    height: fit-content;
+    padding: $px-24;
+
+    &_top {
+      &-right svg {
+        font-size: 12px;
+        transform: translateY(-2px);
+        margin-left: 0;
+      }
+
+      &-range {
+        grid-row: 4;
+      }
+
+      &-speed {
+        grid-row: 5;
+      }
+    }
+
+    &_bottomContainer {
+      grid-template-rows: 1fr;
+      align-items: center;
+    }
+
+    &_features,
+    &_link {
+      grid-row: 1;
+      grid-column: 1/-1;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &_link {
+      opacity: 0;
+
+      & button {
+        box-shadow: none;
+        height: 42px;
+      }
+    }
+
+    &:hover {
+      .carInventory_features {
+        opacity: 0;
+      }
+      .carInventory_link {
+        opacity: 1;
+        z-index: 2;
+      }
+    }
+
+    &_img {
+      width: 80%;
+    }
+
+    &_img-side {
+      & img {
+        width: 100%;
+      }
+    }
+
+    &_listView {
+      width: 100%;
+      padding-bottom: 16px;
+
+      .carInventory_img {
+        justify-self: center;
+      }
+
+      .carInventory_link {
+        opacity: 1;
+      }
+
+      &:hover {
+        .carInventory_features {
+          opacity: 1;
+        }
+      }
+    }
+
+    &_listView-desktop {
+      grid-template-columns: 126px 1fr;
+      grid-template-rows: 1fr;
+      column-gap: $px-24;
+      padding-bottom: 12px;
+    }
+
+    &_expand,
+    &_close {
+      margin-top: 8px;
+      grid-column: 1/-1;
+    }
+  }
+}

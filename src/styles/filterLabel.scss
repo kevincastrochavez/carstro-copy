@@ -1,0 +1,17 @@
+.filterLabel {
+  height: 100%;
+  border-radius: 50%;
+
+  transition: 0.25s ease;
+  cursor: pointer;
+
+  &_selected {
+    box-shadow: 0 0 0 3px $bgnd-lightgray, 0 0 0 6px $green;
+  }
+
+  &_colorImg {
+    width: $px-40;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+}

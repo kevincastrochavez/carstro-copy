@@ -1,0 +1,499 @@
+.saleRepresentativeCard_li {
+  border-top: 1px solid #c8c8c8;
+  padding: $px-12 0px;
+  font-family: $body-font;
+}
+
+.li_div--locationContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.saleRepresentativeCard {
+  &_horizontalLocation {
+    display: flex;
+
+    & svg {
+      margin-right: 4px;
+    }
+  }
+}
+
+.saleRepresentativeCard_div--picturesContainer {
+  margin-right: 20px;
+  width: 120px;
+}
+.saleRepresentativeCard_div--locationsContainer {
+  flex: 1;
+}
+
+.saleRepresentativeCard_li:last-of-type {
+  border-bottom: 1px solid #c8c8c8;
+}
+
+// Location color and size
+.saleRepresentativeCard_li_p {
+  color: #5c5e62;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.saleRepresentativeCard_li_location {
+  color: #5c5e62;
+}
+
+// Icons arrow icon color
+.saleRepresentativeCard_li_arrow {
+  color: #5c5e62;
+}
+
+// Size of the Icons in the location description
+.saleRepresentativeCard_ul_li .li_icon {
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.saleRepresentativeCard_div {
+  padding: $px-12 0px $px-24;
+  display: flex;
+}
+
+.saleRepresentativeCard_div_img {
+  border-radius: 300px;
+  width: 100%;
+}
+
+.saleRepresentativeCard_ul_li {
+  font-family: $body-font;
+  font-size: 12px;
+  color: #5c5e62;
+  line-height: 1.5;
+  margin-bottom: 2px;
+
+  display: flex;
+  align-items: center;
+}
+
+.saleRepresentativeCard_div_img_h4 {
+  font-family: $heading-font;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.saleRepresentativeCard_div--button {
+  background-color: #006039;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-top: $px-20;
+}
+
+/********************************/
+// Modal Window
+/********************************/
+
+.modalWindow_overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1690px;
+  z-index: 10;
+}
+
+.modalWindow_form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  margin: 48px 24px;
+  padding: 24px;
+  z-index: 1000;
+}
+
+.modalWindow_title {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.form_div-closeContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modalWindow_form_h1 {
+  font-size: 30px;
+}
+
+.modalWindow_form_h4 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: $px-20;
+}
+
+.modalWindow_form_p--location {
+  font-weight: 200;
+}
+.modalWindow_form_p--address {
+  margin-bottom: 32px;
+}
+
+.modalWindow_form_p--contatInformation {
+  margin-bottom: 20px;
+}
+
+.modalWindow_form_input {
+  width: 100%;
+  border: #5c5e62 1px solid;
+  height: 48px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+input:focus {
+  outline: #006039 1px solid;
+}
+
+.modalWindow_form_div {
+  width: 100%;
+  border-top: 1px solid #c8c8c8;
+  border-bottom: 1px solid #c8c8c8;
+  padding: $px-20 0px;
+
+  div {
+    gap: 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0px;
+  }
+}
+
+.form_div_h4 {
+  margin-bottom: $px-20;
+}
+
+.form_div_checkBox {
+  width: 24px;
+  height: 24px;
+  background-color: green;
+}
+
+#form_div_div--comment-container {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.modalWindow_form_div textarea {
+  display: block;
+  width: 100%;
+  border: #5c5e62 1px solid;
+  font-family: $body-font;
+  font-size: $px-16;
+  padding: 10px;
+  margin-bottom: $px-20;
+
+  :focus-visible {
+    outline: #006039 1px solid;
+  }
+}
+
+.modalWindow_button {
+  width: 100%;
+}
+
+/********************************/
+// Confirmation Modal Window
+/********************************/
+.modal_confirmation {
+  background-color: #006039;
+  color: white;
+  opacity: 0.95;
+  position: absolute;
+  border-radius: 10px 0px 0px 10px;
+  padding: 20px;
+  top: 15%;
+  right: 0%;
+  width: 80%;
+  margin: 10px auto;
+  height: 70px;
+  display: flex;
+  z-index: 4;
+  align-items: center;
+  box-shadow: -2px 4px 51px -32px rgba(0, 0, 0, 1) inset;
+  -webkit-box-shadow: -2px 4px 51px -32px rgba(0, 0, 0, 1) inset;
+  -moz-box-shadow: -2px 4px 51px -32px rgba(0, 0, 0, 1) inset;
+  animation-name: popup;
+  animation-duration: 4s;
+
+  p {
+    margin-left: 10px;
+  }
+}
+
+@keyframes popup {
+  0% {
+    display: block;
+  }
+  50% {
+    opacity: 0.9;
+  }
+
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    display: none;
+  }
+}
+
+// Tablet view styles
+@media screen and (min-width: 720px) {
+  .saleRepresentativeCard_div {
+    display: grid;
+    grid-template-columns: 0.45fr 0.6fr;
+    grid-template-rows: 0.8fr 0.2fr;
+    justify-items: center;
+  }
+
+  .saleRepresentativeCard_div--picturesContainer {
+    width: 60%;
+    padding-right: 5%;
+  }
+
+  .saleRepresentativeCard_div--picturesContainer {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .saleRepresentativeCard_div_img {
+    border-radius: 300px;
+  }
+
+  .saleRepresentativeCard_div--locationsContainer {
+    width: 85%;
+    justify-self: flex-start;
+  }
+
+  .saleRepresentativeCard_div_img_h4 {
+    font-size: $px-24;
+    margin-bottom: $px-8;
+  }
+
+  .saleRepresentativeCard_ul {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+  }
+
+  .saleRepresentativeCard_ul_li {
+    font-size: 16px;
+  }
+
+  .saleRepresentativeCard_div--button {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  // modal window
+  .modalWindow_form {
+    width: 70%;
+    margin: 50px auto;
+    height: 80%;
+    overflow: scroll;
+  }
+
+  .modalWindow_button {
+    width: 30%;
+  }
+}
+
+// notification disokay
+.modal_confirmation {
+  width: 40%;
+  top: 8%;
+}
+
+// SALES REPRESENTATIVE SPECIAL MEDIA QUERY
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .saleRepresentativeCard_div--button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0 !important;
+  }
+
+  .saleRepresentativeCard_div_img {
+    width: 120px;
+    height: unset;
+    max-width: 160px;
+  }
+}
+
+/* Mobile View -small */
+@media only screen and (min-width: 600px) and (max-width: 719px) {
+  .saleRepresentativeCard_div {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .saleRepresentativeCard_div--button {
+    margin-top: 0;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* Tablet View -medium */
+@media only screen and (min-width: 720px) and (max-width: 989px) {
+  .saleRepresentativeCard_div_img {
+    height: 160px;
+    width: unset;
+  }
+  .saleRepresentativeCard_div {
+    display: flex;
+  }
+  .saleRepresentativeCard_div--button {
+    width: 60%;
+    margin-top: -41px;
+  }
+  .saleRCardSeparator {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 24px;
+  }
+
+  .saleRepresentativeCard_div {
+    align-items: unset;
+    padding: 24px 0px 0px 0px;
+    gap: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+  }
+
+  .saleRepresentativeCard_div--button {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    background-color: transparent;
+    gap: 20px;
+    width: 100%;
+
+    & button {
+      width: 85%;
+      max-width: 400px;
+      grid-column: 2;
+    }
+  }
+
+  .saleRepresentativeCard_li {
+    padding-bottom: 12px;
+  }
+}
+
+/* Desktop   V I E W -large */
+@media only screen and (min-width: 990px) {
+  .saleRepresentativeCard_div_img {
+    max-width: 120px;
+    width: 10vw;
+  }
+
+  .saleRepresentativeCard_div {
+    justify-content: center;
+  }
+  .saleRepresentativeCard_div--picturesContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: unset;
+    padding-right: 0;
+    grid-row-start: unset;
+    grid-row-end: unset;
+  }
+
+  .saleRepresentativeCard_div--locationsContainer {
+    min-width: unset;
+    margin-left: 20px;
+  }
+
+  .main_section_representatives {
+    min-width: 320px;
+    width: 24vw;
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 600px;
+  }
+
+  .sales-scrollbarSeparation {
+    margin-right: 7px;
+  }
+
+  .main_section_representatives::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .main_section_representatives::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .main_section_representatives::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+  }
+
+  .saleRepresentativeCard_ul_li {
+    font-size: 0.9rem;
+  }
+
+  .saleRepresentativeCard_div {
+    grid-template-columns: unset;
+    display: flex;
+  }
+
+  .saleRepresentativeCard_div--button {
+    margin-top: 0;
+  }
+
+  .saleRepresentativeCard_div--picturesContainer {
+    width: unset;
+    margin-right: 0;
+  }
+
+  .modalWindow_form {
+    margin-top: 120px;
+  }
+
+  .modalWindow_overlay {
+    height: 1285px;
+  }
+}
+
+.btn_green {
+  font-family: $heading-font;
+  background-color: #006039;
+  width: 100%;
+  padding: 10px 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.saleRepresentativeCard_div--button {
+  transition: 0.3s;
+}
+
+.saleRepresentativeCard_div--button:hover {
+  opacity: 90%;
+}

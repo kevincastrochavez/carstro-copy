@@ -1,0 +1,172 @@
+.footerContainer {
+  background-color: #222222;
+  border-top: 1px solid #696969;
+  color: white;
+  padding: 0 24px;
+}
+
+.footerLogoBox {
+  margin: 32px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footerInfoBox {
+  display: flex;
+}
+
+.footer-logo {
+  cursor: pointer;
+  height: 48px;
+}
+
+.footerInfoBoxSingle-link {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Raleway';
+  margin-bottom: 8px;
+  transition: 0.3s;
+  width: fit-content;
+  color: white;
+}
+
+.footerInfoBoxSingle-link:visited {
+  color: white;
+}
+
+.footerInfoBoxSingle-link:hover {
+  color: #006039;
+}
+
+.footerInfoBoxSingle-title {
+  cursor: default;
+}
+
+.footerRights {
+  font-family: 'Raleway';
+  margin-bottom: 14px;
+}
+
+.footerInfoBoxSingle-title {
+  font-weight: bold;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-family: 'Raleway';
+}
+
+.footerSocialMediaIcons {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footerSocialMediaIcon {
+  cursor: pointer;
+  transition: 0.2s;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.footerSocialMediaIcon:visited {
+  color: white;
+}
+
+.footerSocialMediaIcon:hover {
+  color: #006039;
+}
+
+.footerInfoBoxSingle {
+  margin-bottom: 60px;
+}
+
+.footer_bpa {
+  width: 80px;
+  align-self: center;
+  order: 2;
+
+  & img {
+    width: 100%;
+  }
+}
+
+.footerRights {
+  order: 3;
+}
+
+.footerInfoBoxSingle-links {
+  gap: 8px;
+}
+
+.footerInfoLast {
+  gap: 20px;
+}
+
+/* Mobile View -small */
+@media only screen and (max-width: 719px) {
+  .footerLogoBox {
+    margin-top: 32px;
+  }
+
+  .footerInfoBox {
+    flex-direction: column;
+  }
+
+  .footerRights {
+    text-align: center;
+  }
+
+  .footerInfoBoxSingle-links {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Tablet View -medium */
+@media only screen and (min-width: 720px) {
+  .footerContainer {
+    padding: 0 32px 64px;
+  }
+
+  .footerInfoBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    gap: 48px;
+  }
+
+  .footerLogoBox {
+    margin: 32px 0px 48px;
+  }
+
+  .footerInfoBoxSingle {
+    margin-bottom: 0;
+  }
+
+  .footerInfoBoxSingle-links {
+    display: grid;
+  }
+
+  .footerInfoBoxSingle-links a {
+    margin-bottom: 0;
+  }
+
+  .footerSocialMediaIcons {
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  .footerInfoBox {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+
+  .footerInfoLast {
+    gap: 24px;
+  }
+}

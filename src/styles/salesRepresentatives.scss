@@ -1,0 +1,69 @@
+.salesRepresentativesContainer {
+  background-color: white;
+  padding: 0 24px;
+}
+
+.main_h1 {
+  padding: $px-24 0px $px-48;
+}
+
+// Google Map styles
+#map {
+  height: 50%;
+}
+
+#salesRepresentatives_ul {
+  cursor: pointer;
+}
+
+/* M O B I L E   V I E W -small */
+@media only screen and (max-width: 719px) {
+  .main_h1 {
+    font-size: 32px;
+  }
+}
+
+/* T A B L E T   V I E W -medium */
+@media only screen and (min-width: 720px) and (max-width: 989px) {
+  .salesRepresentativesContainer {
+    padding: 0 32px;
+  }
+}
+
+/* D E S K T O P   V I E W -large */
+@media only screen and (min-width: 990px) {
+  .salesRepresentativesContainer {
+    padding-bottom: 80px;
+    width: 100%;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+  }
+
+  .salesRepresentatives_main {
+    width: 100%;
+    margin: 0px 40px;
+    padding: 0;
+
+    & h1 {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+  }
+
+  .salesRepresentatives_main_div {
+    max-width: 1040px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 45px;
+  }
+
+  .salesRepresentatives_section_h2 {
+    display: none;
+  }
+
+  .saleRepresentativeCard_ul {
+    flex-direction: column;
+  }
+}

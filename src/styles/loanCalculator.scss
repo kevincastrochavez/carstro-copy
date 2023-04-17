@@ -1,0 +1,231 @@
+.loanCalculator {
+  &_estimator {
+    padding: $px-24;
+
+    & h2 {
+      font-size: $px-32;
+      font-weight: 500;
+      font-family: $body-font;
+      text-align: center;
+    }
+  }
+
+  &_calculator {
+    margin-top: $px-32;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: $px-32;
+  }
+
+  &_field {
+    position: relative;
+
+    & label {
+      font-size: $px-12;
+    }
+
+    & select,
+    & input {
+      width: 100%;
+      font-size: $px-16;
+      font-family: $body-font;
+      line-height: 1.5;
+      padding: $px-12;
+      background-color: white;
+      color: black;
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+    & select {
+      padding-right: 40px;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    & svg {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      transform: rotate(90deg);
+      color: $green;
+    }
+  }
+
+  &_result {
+    background-color: white;
+    padding: $px-24;
+
+    & h3 {
+      font-size: $px-24;
+      font-family: $body-font;
+    }
+
+    &-divider {
+      width: 90px;
+      height: 4px;
+      background-color: $green;
+      margin: $px-8 0;
+    }
+
+    &-price {
+      & span {
+        font-size: $px-32;
+        line-height: 1.25;
+      }
+    }
+
+    & > span {
+      font-size: 10px;
+    }
+  }
+
+  &_link {
+    background-color: white;
+    padding: 0 $px-24;
+
+    & a {
+      background-color: $green;
+      color: white;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      padding: $px-16 0;
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .loanCalculator {
+    &_estimator {
+      padding: $px-32;
+
+      &-details {
+        margin-top: $px-8;
+        display: flex;
+        justify-content: center;
+        gap: $px-12;
+
+        font-size: $px-12;
+        font-family: $body-font;
+        line-height: 1.5;
+      }
+
+      &-divider {
+        width: 1px;
+        background-color: #a49d9d;
+      }
+    }
+
+    &_calculator {
+      margin-top: $px-48;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      gap: $px-48;
+    }
+
+    &_resultExpanded {
+      background-color: white;
+      padding: $px-64 $px-32;
+
+      display: flex;
+      justify-content: space-between;
+
+      &-img {
+        width: 20vw;
+        max-width: 180px;
+
+        & img {
+          width: 100%;
+        }
+      }
+
+      &-details {
+        align-self: center;
+
+        display: grid;
+        grid-template-columns: repeat(7, auto);
+        grid-template-rows: $px-24 76px;
+        column-gap: $px-24;
+      }
+
+      &-item {
+        display: grid;
+
+        & span {
+          font-size: $px-32;
+        }
+
+        & p {
+          font-size: $px-16;
+        }
+      }
+
+      &-divider {
+        width: 1px;
+        background-color: $lightIcon;
+      }
+
+      &-finance {
+        grid-row: 1;
+        grid-column: 1/-1;
+        text-align: end;
+      }
+    }
+
+    &_link {
+      padding-bottom: $px-32;
+
+      & a {
+        margin: 0 auto;
+        width: 360px;
+      }
+    }
+
+    &_terms {
+      background-color: white;
+      border-top: 1px solid $lightIcon;
+      padding: $px-48 0;
+
+      & h4 {
+        text-align: center;
+        font-size: 12px;
+        margin-bottom: 4px;
+      }
+
+      & p {
+        text-align: center;
+        font-size: 10px;
+        padding: 0 32px;
+        line-height: 1.5;
+        max-width: 820px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .loanCalculator {
+    &_estimator {
+      max-width: 864px;
+      margin: 0 auto;
+    }
+
+    &_resultExpanded {
+      justify-content: center;
+      gap: 106px;
+    }
+
+    &_field {
+      & select {
+        cursor: pointer;
+      }
+    }
+  }
+}

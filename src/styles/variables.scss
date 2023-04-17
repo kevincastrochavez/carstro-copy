@@ -1,0 +1,100 @@
+// COLORS
+
+$bgnd-darkgray: #222222;
+$bgnd-white: #ffffff;
+$bgnd-lightgray: #f4f4f4;
+$green: #006039;
+$divider: #696969;
+$lightIcon: #d9d9d9;
+$lightgrayText: #5c5e62;
+
+//////////////////////////
+// FONTS
+
+$heading-font: "Raleway", sans-serif;
+$body-font: "Cabin", sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+button {
+  font-family: $heading-font;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+p,
+input,
+label,
+span,
+a {
+  font-family: $body-font;
+  line-height: 1.5;
+}
+
+//////////////////////////
+// SIZES
+
+$px-4: 4px;
+$px-8: 8px;
+$px-12: 12px;
+$px-16: 16px;
+$px-20: 20px;
+$px-24: 24px;
+$px-28: 28px;
+$px-32: 32px;
+$px-36: 36px;
+$px-40: 40px;
+$px-44: 44px;
+$px-48: 48px;
+$px-52: 52px;
+$px-56: 56px;
+$px-60: 60px;
+$px-64: 64px;
+$px-68: 68px;
+$px-72: 72px;
+$px-76: 76px;
+$px-80: 80px;
+$px-84: 84px;
+$px-88: 88px;
+$px-92: 92px;
+$px-96: 96px;
+$px-100: 100px;
+
+//////////////////////////////
+// FONT SIZES
+
+h1 {
+  font-size: $px-32;
+}
+
+p2r {
+  font-family: "Cabin";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+p1 {
+  font-family: "Cabin";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+@media screen and (min-width: 720px) {
+  h1 {
+    font-size: $px-40;
+  }
+}
+
+// MEDIA QUERIES REFERENCE
+
+// Mobile: Up to 719px
+// Tablet: From 720 up to 989
+// Desktop: From 990 up to 1439
+// 4K: After 1440

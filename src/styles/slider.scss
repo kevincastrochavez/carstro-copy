@@ -1,0 +1,33 @@
+.slider {
+  &_minMax {
+    display: flex;
+    justify-content: space-between;
+
+    & span {
+      font-size: 14px;
+      font-family: $heading-font;
+      line-height: 1.25;
+    }
+  }
+
+  & > span {
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 20px);
+    margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .slider {
+    &_minMax {
+      & span {
+        width: 232px;
+      }
+    }
+
+    & > span {
+      width: 212px;
+    }
+  }
+}

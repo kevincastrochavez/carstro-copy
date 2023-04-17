@@ -1,0 +1,183 @@
+.filters {
+  padding: $px-24;
+  background-color: #fff;
+  border-radius: $px-8 $px-8 0 0;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  z-index: 100;
+
+  position: absolute;
+  top: $px-44;
+  right: 0;
+  left: 0;
+
+  max-width: 500px;
+  margin: 0 auto;
+
+  &_top {
+    display: flex;
+
+    & h2 {
+      flex: 1;
+      height: auto;
+      align-self: flex-end;
+      font-size: $px-24;
+    }
+  }
+
+  &_closeBtn {
+    cursor: pointer;
+  }
+
+  &_button {
+    padding: $px-8;
+    margin-top: $px-24;
+    margin-bottom: $px-16;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  &_divider {
+    height: 1px;
+    background-color: $lightIcon;
+  }
+
+  &_form {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: calc(100vh - 186.6px);
+    margin-top: $px-16;
+
+    & section {
+      margin-bottom: $px-24;
+    }
+
+    & section:last-of-type {
+      margin-bottom: 80px;
+    }
+
+    & h5 {
+      font-size: 14px;
+      font-family: $body-font;
+      line-height: 1.5;
+      margin-bottom: $px-8;
+    }
+  }
+
+  &_checkbox {
+    display: flex;
+    align-items: center;
+    gap: $px-8;
+    margin-bottom: $px-4;
+
+    & input {
+      height: $px-24;
+      width: $px-24;
+      cursor: pointer;
+      outline: none;
+    }
+
+    & label {
+      -webkit-tap-highlight-color: transparent;
+      font-size: 14px;
+    }
+  }
+
+  &_colors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $px-24;
+    padding: 0 6px;
+
+    .filters_checkbox {
+      margin-bottom: 0;
+      height: $px-40;
+    }
+  }
+}
+
+.filters_hidden {
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 100%;
+  z-index: -1;
+  opacity: 0;
+}
+
+@media screen and (min-width: 720px) {
+  .filters {
+    width: calc(100% - 96px);
+    max-width: 600px;
+    margin: 0 auto;
+
+    &_button {
+      margin-bottom: $px-24;
+    }
+
+    &_form {
+      margin-top: $px-24;
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .filters {
+    &_form {
+      // Hide scrollbar
+      -ms-overflow-style: none; // IE and Edge
+      scrollbar-width: none; // Firefox
+
+      // Chrome, Safari and Opera
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .filters {
+    grid-column: 2/3;
+    grid-row: 3/4;
+
+    position: sticky;
+    top: 92px;
+    margin-top: $px-36;
+    margin-left: 0;
+    width: 90%;
+    padding: 0;
+    height: 910px;
+    background-color: $bgnd-lightgray;
+
+    // Styles in filters form to make the scrollbar visible at all times
+    &_form {
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+      }
+
+      &::-webkit-scrollbar:vertical {
+        width: 11px;
+      }
+
+      &::-webkit-scrollbar:horizontal {
+        height: 11px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 2px solid #f4f4f4;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    &_button {
+      box-shadow: none;
+
+      &-desktop {
+        margin-top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,201 @@
+.carDetails {
+  padding-bottom: $px-24;
+
+  &_imgContainer {
+    padding: $px-24;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+    & img {
+      width: 55%;
+    }
+  }
+
+  &_info {
+    padding: 16px 24px 24px;
+  }
+
+  &_linkBack {
+    font-size: $px-12;
+    display: flex;
+    align-items: center;
+    color: $green;
+
+    & svg {
+      font-size: $px-12;
+      margin-right: $px-8;
+    }
+  }
+
+  &_features {
+    margin-top: $px-16;
+
+    display: grid;
+    grid-template-rows: auto auto 52px;
+    gap: $px-16;
+
+    &-heading {
+      & h1 {
+        font-size: 18px;
+        font-family: $body-font;
+        font-weight: 500;
+      }
+    }
+
+    &-numbers {
+      margin-top: $px-4;
+      display: flex;
+      gap: 10px;
+
+      & span {
+        font-size: $px-12;
+      }
+    }
+
+    &-divider {
+      width: 1px;
+      height: 10px;
+      background-color: $lightIcon;
+      align-self: center;
+    }
+
+    &-price {
+      display: flex;
+      gap: $px-20;
+    }
+
+    &-bigPrice {
+      font-size: $px-36;
+    }
+
+    &-bigDivider {
+      width: 2px;
+      height: 47px;
+      align-self: center;
+      background-color: $lightIcon;
+    }
+
+    &-offer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      & span {
+        font-size: $px-12;
+      }
+
+      & p {
+        color: $green;
+        font-size: $px-12;
+      }
+
+      & > span {
+        font-size: $px-16;
+      }
+    }
+
+    &-btn {
+      background-color: $green;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &_iconsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: $px-20;
+
+    margin: $px-48 0 $px-24;
+  }
+
+  &_icon {
+    justify-self: center;
+
+    display: flex;
+    flex-direction: column;
+
+    & svg {
+      color: $green;
+      margin-bottom: $px-8;
+    }
+
+    & p {
+      color: $green;
+      font-size: $px-12;
+      text-align: center;
+    }
+  }
+
+  &_calculator {
+    background-color: $bgnd-lightgray;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .carDetails {
+    &_imgContainer {
+      & img {
+        width: 50%;
+        max-width: 300px;
+      }
+    }
+
+    &_info {
+      padding: $px-16 $px-32;
+    }
+
+    &_features {
+      display: flex;
+      gap: $px-24;
+
+      &-heading {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & h1 {
+          font-size: $px-24;
+        }
+      }
+
+      &-btn {
+        padding: 0 $px-24;
+      }
+    }
+
+    &_iconsContainer {
+      max-width: 770px;
+      margin: $px-56 auto $px-40;
+
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 1fr;
+      gap: $px-52;
+    }
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .carDetails {
+    &_imgContainer {
+      & img {
+        width: 30%;
+      }
+    }
+
+    &_info {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    &_iconsContainer {
+      max-width: 864px;
+    }
+  }
+}
