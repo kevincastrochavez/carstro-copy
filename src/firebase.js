@@ -1,13 +1,12 @@
 import firebase from 'firebase';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyA_hEDcH4QWZq1ANyVsvwro33fh__UEg28',
-  authDomain: 'carstro-15495.firebaseapp.com',
-  databaseURL: 'https://carstro-15495-default-rtdb.firebaseio.com',
-  projectId: 'carstro-15495',
-  storageBucket: 'carstro-15495.appspot.com',
-  messagingSenderId: '920852337820',
-  appId: '1:920852337820:web:8b065261afc6b025b5c959',
+  apiKey: 'AIzaSyAkrC_p5zdW8yGzLVi85gw352mGLMoGVx0',
+  authDomain: 'carstro-copy.firebaseapp.com',
+  projectId: 'carstro-copy',
+  storageBucket: 'carstro-copy.appspot.com',
+  messagingSenderId: '912419158823',
+  appId: '1:912419158823:web:a72ebd976a1750cc53c702',
 };
 
 const app = firebase.initializeApp(firebaseConfig);
